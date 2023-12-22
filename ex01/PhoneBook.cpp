@@ -29,7 +29,6 @@ void	PhoneBook::contactSearch(int index)
 		std::cout << std::setw(10) << std::setfill(' ')<< std::left <<formatAndTruncate(contact[index].getFirstName()) << "|";
 		std::cout << std::setw(10) << std::setfill(' ')<< std::left <<formatAndTruncate(contact[index].getLastName()) << "|";
 		std::cout << std::endl;
-		std::cout << std::endl;
 	}
 	else
 	{
@@ -42,7 +41,7 @@ std::string	PhoneBook::formatAndTruncate(std::string str)
 	std::string new_str = str;
 	if (new_str.length() >= 10)
 	{
-		new_str = new_str.substr(0, 10 - 1) + ".";
+		new_str = new_str.substr(0, 10 - 3) + "...";
 	}
 	return new_str;
 }
