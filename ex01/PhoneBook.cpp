@@ -25,9 +25,13 @@ void	PhoneBook::contactSearch(int index)
 	if (index >= 0 && index <= 8)
 	{
 		std::cout << std::setw(10) << std::setfill(' ') << std::right << "First Name" << "|";
-		std::cout << std::setw(10) << std::setfill(' ') << std::right << "Last Name" << "|" <<std::endl;
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << "Last Name" << "|";
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << "Nickname" << "|";
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << "Phone number" << "|" <<std::endl;
 		std::cout << std::setw(10) << std::setfill(' ')<< std::left <<formatAndTruncate(contact[index].getFirstName()) << "|";
 		std::cout << std::setw(10) << std::setfill(' ')<< std::left <<formatAndTruncate(contact[index].getLastName()) << "|";
+		std::cout << std::setw(10) << std::setfill(' ')<< std::left <<formatAndTruncate(contact[index].getNickname()) << "|";
+		std::cout << std::setw(10) << std::setfill(' ')<< std::left <<formatAndTruncate(contact[index].getPhoneNumber()) << "|";
 		std::cout << std::endl;
 	}
 	else
